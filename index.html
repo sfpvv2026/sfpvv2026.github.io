@@ -10,6 +10,9 @@
     <meta name="author" content="SFPVV2026 organising committee">
     <meta name="keywords" content="SFPVV2026,SFPVV'26,3rd SFPVV,Conference,Computer Science,Software Engineering,Formal Methods">
 
+    <link rel="alternate" hreflang="en" href="index.html">
+    <link rel="alternate" hreflang="ja" href="index_jp.html">
+
     <title>SFPVV2026</title>
 
     <!-- Bootstrap core CSS -->
@@ -59,7 +62,7 @@
                 -->
  
                 <li class="nav-item dropdown">
-                    <a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Attending
+                    <a class="btn btn-default dropdown-toggle" role="button" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attending
                         <span class="caret"></span>
                     </a>
                     
@@ -68,8 +71,6 @@
                         <li><a class="dropdown-item nav-link js-scroll-trigger" href="#venue">Venue</a></li>
 
                         <li><a class="dropdown-item nav-link js-scroll-trigger" href="#Accommodation">Accommodation</a></li>
-
-                        <li><a class="dropdown-item nav-link js-scroll-trigger" href="#Visa">Visa</a></li>
 <!-- 
                         <li><a class="dropdown-item nav-link js-scroll-trigger" href="ICFEM2024Proceedings.pdf" target="_blank">Proceedings</a></li>
 -->
@@ -95,6 +96,10 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#submission">Submit</a>
                 </li> 
+
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+                </li>
 
 <!--
                 
@@ -332,14 +337,12 @@
 
         <p class="mb-2 text-white text-justify">CITE is one of the key departments of the Institute for Development of Digital Human Resources (IDDHR). CITE supports information technology education and academic research activities in Ehime University by managing the university's information infrastructure and network security.</p>
 
-        <div class="row">
-            <div class="row">
-                <div class="col-6">
-                    <a href="http://www.sei.ecnu.edu.cn/seien/"><img src="img/venue/v1.jpg" class="img-fluid"></a>
-                </div>
-                <div class="col-6">
-                    <a href="http://www.sei.ecnu.edu.cn/seien/"><img src="img/venue/v2.png" class="img-fluid"></a>
-                </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+                <a href="https://www.cite.ehime-u.ac.jp/"><img src="img/venue/v1.jpg" class="img-fluid" alt="Center for Information Technology, Ehime University" loading="lazy"></a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="https://www.cite.ehime-u.ac.jp/"><img src="img/venue/v2.png" class="img-fluid" alt="Map of the Johoku Campus area at Ehime University" loading="lazy"></a>
             </div>
         </div>
 
@@ -415,8 +418,8 @@
     <div class="container text-center">
         <h2 class="mb-4">Keynote Speakers</h2>
         <div class="row">
-            <div class="col-lg-2 mx-auto text-center lign-middle" style="padding: 10px">
-                <img src="img/Tsuchiya.JPG" width="290">
+            <div class="col-lg-3 mx-auto text-center lign-middle" style="padding: 10px">
+                <img src="img/Tsuchiya.JPG" class="img-fluid keynote-photo" alt="Tatsuhiro Tsuchiya" loading="lazy">
             </div>
             <div class="col-lg-6 mx-auto text-left">
                 <p class="mb-2 text-white text-justify"><a href="https://tatsuhirotsuchiya.github.io/jp/"><strong>Tatsuhiro Tsuchiya</strong></a> is a Professor at the Graduate School of Information
@@ -444,8 +447,8 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
         </div>
 
         <div class="row">
-            <div class="col-lg-2 mx-auto text-center lign-middle" style="padding: 10px">
-                <img src="img/liu.jpg" width="290">
+            <div class="col-lg-3 mx-auto text-center lign-middle" style="padding: 10px">
+                <img src="img/liu.jpg" class="img-fluid keynote-photo" alt="Zhiming Liu" loading="lazy">
             </div>
             <div class="col-lg-6 mx-auto text-left">
                 <p class="mb-2 text-white text-justify"><a href="mailto:zhimingliu88@swu.edu.cn"><strong>Zhiming Liu</strong></a> is a Professor at Southwest University, Chongqing, China. He received his master’s degree from the Institute of Software, Chinese Academy of Sciences, in 1988, and his PhD in Computer Science from the University of Warwick in 1991. Before joining Southwest University full-time in 2016, he held positions at the University of Warwick, the University of Leicester, and UNU-IIST in Macau. His research focuses on software theory and methods, trustworthy software systems, and, more recently, modelling and design methods for human-cyber-physical systems (HCPS). He is known for his work on model-transformation-based methods for fault-tolerant and real-time programming, probabilistic Duration Calculus, object-oriented program semantics and refinement, the rCOS model-driven software development method, and HCPS software architecture modelling and design. He was a founder of the international conferences ICTAC, FACS, and SETTA, and the spring school SETSS. He has served as chair or programme committee member for many conferences, including ATVA, APLAS, FM, ICTAC, SEFM, and VSTTE, and as guest editor for special issues of journals such as Formal Aspects of Computing, Science of Computer Programming, and Theoretical Computer Science.</p>
@@ -563,13 +566,23 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Important Dates</h2>
-                <li>Full/Regular Paper Track</li>
-                <p class="mb-2">Submission Deadline: 1 September 2026</p>
-                <p class="mb-2">Notification: 29 September 2026</p>
-                <p class="mb-2">Camera-ready: 20 October 2026</p>
-                <li>Presentation Track</li>
-                <p class="mb-2">Submissions: 15 September 2026</p>
-                <p class="mb-2">Notification: 8 October 2026</p>
+                <div class="dates-grid text-left mt-4">
+                    <div>
+                        <h3 class="h5">Full/Regular Paper Track</h3>
+                        <ul>
+                            <li>Submission Deadline: 1 September 2026</li>
+                            <li>Notification: 29 September 2026</li>
+                            <li>Camera-ready: 20 October 2026</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="h5">Presentation Track</h3>
+                        <ul>
+                            <li>Submission Deadline: 15 September 2026</li>
+                            <li>Notification: 8 October 2026</li>
+                        </ul>
+                    </div>
+                </div>
                 <hr>
                
             </div>
@@ -588,13 +601,15 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
                     Two types of submissions are possible: presentation papers and regular papers. Both types of papers should be written in English. All papers should be submitted using the EasyChair link: <!--TBD--><a href="https://easychair.org/conferences/?conf=sfpvv2026">here</a>. Accepted presentation papers will not be included in the proceedings of the symposium; only the accepted regular papers will be included in the proceedings, which will be published in the Springer LNCS series. The details of the symposium can be found in the symposium homepage.
                 </p>
 
-                <li class="text-white mb-3 text-justify">
-                    A regular paper must not have been published or be concurrently considered for publication elsewhere. Each regular paper should not exceed 18 pages (including references) in the Springer LNCS format.
-                </li>
+                <ul class="text-white text-left content-list">
+                    <li>
+                        A regular paper must not have been published or be concurrently considered for publication elsewhere. Each regular paper should not exceed 18 pages (including references) in the Springer LNCS format.
+                    </li>
 
-                <li class="text-white mb-3 text-justify">
-                    A presentation paper is not required to report mature research results but expected to include new ideas or progress in ongoing research projects. Each presentation paper must provide a clear title and an extended abstract in 2 pages in the Springer LNCS format.
-                </li>
+                    <li>
+                        A presentation paper is not required to report mature research results but expected to include new ideas or progress in ongoing research projects. Each presentation paper must provide a clear title and an extended abstract in 2 pages in the Springer LNCS format.
+                    </li>
+                </ul>
                    
                 <!--
                 <p class="text-white mb-3 text-justify">
@@ -759,18 +774,13 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
         <div class="row">
             <div class="col-lg-12 mx-auto text-center">
                 <h2 class="section-heading text-white">Sponsors</h2>
-                <p class="mb-2" style="padding: 10px;background-color: transparent; width: 1000px;margin-left: auto; margin-right: auto;">
-
-                    <a href="https://www.hiroshima-u.ac.jp/en"><img src="img/logos/HiroshimaU_Logo.jpg" alt="HU" height="100"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://english.ecnu.edu.cn//"><img src="img/logos/ecnu.png" alt="IPJ" height=100></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://www.ehime-u.ac.jp/"><img src="img/logos/ehime.jpg" alt="ehime" height=100></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://digital.ins.ehime-u.ac.jp/"><img src="img/logos/i_ehime.jpg" alt="ehime" height=100></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://www.mdpi.com/"><img src="img/logos/mdpi_logo.jpg" alt="mdpi" height=100></a>
-                </p>
+                <div class="sponsor-logos mb-3">
+                    <a href="https://www.hiroshima-u.ac.jp/en"><img class="sponsor-logo" src="img/logos/HiroshimaU_Logo.jpg" alt="Hiroshima University"></a>
+                    <a href="https://english.ecnu.edu.cn/"><img class="sponsor-logo" src="img/logos/ecnu.png" alt="East China Normal University"></a>
+                    <a href="https://www.ehime-u.ac.jp/"><img class="sponsor-logo" src="img/logos/ehime.jpg" alt="Ehime University"></a>
+                    <a href="https://digital.ins.ehime-u.ac.jp/"><img class="sponsor-logo" src="img/logos/i_ehime.jpg" alt="Institute for Development of Digital Human Resources, Ehime University"></a>
+                    <a href="https://www.mdpi.com/"><img class="sponsor-logo sponsor-logo-mdpi" src="img/logos/mdpi_logo.svg" alt="MDPI"></a>
+                </div>
 
 
                 <p class="text-white mb-2">Supported by Hiroshima University</p>
@@ -780,26 +790,38 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
                 <p class="text-white mb-2" style="text-indent: 2.5em;">Institute for Development of Digital Human Resources, Ehime University</p>
 
                 <p class="text-white mb-2" style="text-indent: 2.5em;">Multidisciplinary Digital Publishing Institute (MDPI)</p>
+
+                <div class="special-issue-card text-left mt-5" id="special-issue">
+                    <a class="special-issue-image-link" href="https://www.mdpi.com/journal/software/special_issues/X9B7U49274" target="_blank" rel="noopener noreferrer" aria-label="Visit the MDPI Software special issue: Software Reliability, Security and Quality Assurance">
+                        <img class="img-fluid" src="img/Software_Newsletter.jpg" alt="Digital security illustration for the MDPI Software special issue" loading="lazy">
+                    </a>
+                    <div class="special-issue-copy">
+                        <div class="special-issue-heading">
+                            <img src="img/logos/mdpi_logo.svg" alt="" aria-hidden="true">
+                            <p class="special-issue-label mb-0">MDPI Software Special Issue</p>
+                        </div>
+                        <h3>Software Reliability, Security and Quality Assurance</h3>
+                        <p>Learn more about the special issue in the MDPI journal <em>Software</em>.</p>
+                        <a class="btn btn-primary" href="https://www.mdpi.com/journal/software/special_issues/X9B7U49274" target="_blank" rel="noopener noreferrer">View Special Issue <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 
-<section class="bg-dark" id="sponsors">
+<section class="bg-dark" id="technical-sponsors">
     <div class="container">
         <div class="row">
 
             <div class="col-lg-12 mx-auto text-center">
                 <h2 class="section-heading text-white">Technical Sponsors</h2>
-                <p class="mb-2" style="padding: 10px;background-color: transparent; width: 1000px;margin-left: auto; margin-right: auto;">
-                    
-                    <a href="https://www.sigse.jp/index.html"><img src="img/logos/IPSJ_Logo.png" alt="IPSJ" height="100"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://www.ieice.org/iss/ss/"><img src="img/logos/IEICE_Logo.jpg" alt="IEICE" height="100"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://fose.jssst.or.jp/"><img src="img/logos/JSSST_Logo.jpg" alt="JSSST" height="100"></a>
-                </p>
+                <div class="sponsor-logos mb-3">
+                    <a href="https://www.sigse.jp/index.html"><img class="sponsor-logo sponsor-logo-wide" src="img/logos/IPSJ_Logo.png" alt="IPSJ SIG Software Engineering"></a>
+                    <a href="https://www.ieice.org/iss/ss/"><img class="sponsor-logo" src="img/logos/IEICE_Logo.jpg" alt="IEICE SIG Software Science"></a>
+                    <a href="https://fose.jssst.or.jp/"><img class="sponsor-logo sponsor-logo-wide" src="img/logos/JSSST_Logo.jpg" alt="JSSST SIG Foundation of Software Engineering"></a>
+                </div>
 
 
                 <p class="text-white mb-2">Supported by IPSJ SIG Software Engineering</p>
@@ -823,8 +845,14 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mx-auto text-center">
-                <h2 class="section-heading text-white">Awards</h2>
-                TBD
+                <p class="award-kicker mb-2">SFPVV 2026 Awards</p>
+                <h2 class="section-heading text-white">MDPI Software Best Paper Award and Best Presentation Award</h2>
+                <div class="award-copy text-white text-left mt-4">
+                    <p>At SFPVV 2026, we plan to present a Best Paper Award and a Best Presentation Award, sponsored by MDPI Software.</p>
+                    <p>The <strong>Best Paper Award</strong> will recognize the technical quality and research contribution of a paper and will be selected from all regular papers accepted for the symposium. The <strong>Best Presentation Award</strong> will focus on the quality of the presentation itself—including its clarity, organization, effectiveness in communicating research ideas, and the presenter's interaction with the audience during the Q&amp;A session—and will be selected from both regular papers and presentation papers.</p>
+                    <p>The Organizing Committee will select the winners of the Best Paper Award and the Best Presentation Award. The results will be announced during the Closing Session and posted on the symposium website. Each winner will receive a cash award.</p>
+                    <p class="mb-0">We hope these awards will encourage authors to submit high-quality papers and presenters to deliver outstanding presentations, fostering greater interaction and discussion among all symposium participants.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -850,7 +878,7 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
                 <p class="my-4"></p>
                 <h4 class="section-heading">General Chair</h4>
                 <p>
-                    <a href="https://faculty.ecnu.edu.cn/_s43/lsy2/main.psp">Tadashi Dohi</a>, Hiroshima University, Japan<br/>
+                    <a href="https://home.hiroshima-u.ac.jp/dohi/index-e.html">Tadashi Dohi</a>, Hiroshima University, Japan<br/>
                 </p>
 
                 
@@ -858,7 +886,7 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
                 <h4 class="section-heading">Program Chairs</h4>
                 <p>
                     <a href="mailto:aman@ehime-u.ac.jp">Hirohisa Aman</a>, Ehime University, Japan<br/>
-                    <a href="">Xi Wang</a>, Shanghai University, China<br/>
+                    Xi Wang, Shanghai University, China<br/>
                 </p>
 
                 <hr class="my-4">
@@ -921,7 +949,7 @@ International Conference on Artificial Intelligence Testing (AITest 2026).</p>
                     <a href="mailto:yamine@enseeiht.fr">Yamine Ait Ameur</a>, IRIT/INPT-ENSEEIHT, France<br/>
                     <a href="mailto:amasaki@nanzan-u.ac.jp">Sousuke Amasaki</a>, Nanzan University, Japan<br/>
                     <a href="mailto:ycheon@utep.edu">Yoonsik Cheon</a>, University of Texas at El Paso, USA<br/>
-                    <a href="dmailto:aiyujun9123@outlook.com">Yujun Dai</a>, Micron Technology<br/>
+                    <a href="mailto:aiyujun9123@outlook.com">Yujun Dai</a>, Micron Technology<br/>
                     <a href="mailto:maradowning@cs.ucsb.edu">Mara Downing</a>, University of California Santa Barbara, USA<br/>
                     <a href="mailto:fangdingbang@fjnu.edu.cn">Dingbang Fang</a>, Fujian Normal University, China<br/>
                     <a href="mailto:marc.frappier@usherbrooke.ca">Marc Frappier</a>, Université de Sherbrooke, Canada<br/>
