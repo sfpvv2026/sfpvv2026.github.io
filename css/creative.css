@@ -144,6 +144,37 @@ img::-moz-selection {
   background-color: transparent;
 }
 
+#mainNav .language-switch {
+  color: #6c757d;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 0.25rem 0.75rem 0.75rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#mainNav .language-switch a {
+  color: inherit;
+  opacity: 0.62;
+  text-decoration: none;
+}
+
+#mainNav .language-switch a[aria-current="page"] {
+  opacity: 1;
+}
+
+#mainNav .language-switch span {
+  opacity: 0.42;
+  padding: 0 0.18rem;
+}
+
+#mainNav .language-switch a:hover,
+#mainNav .language-switch a:focus {
+  color: #F05F40;
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
@@ -166,6 +197,16 @@ img::-moz-selection {
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
     color: #fff;
   }
+  #mainNav .language-switch {
+    color: rgba(255, 255, 255, 0.65);
+    display: inline-block;
+    margin: 0 0 0 0.5rem;
+    text-align: left;
+  }
+  #mainNav .language-switch a:hover,
+  #mainNav .language-switch a:focus {
+    color: #fff;
+  }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
     background-color: #fff;
@@ -182,6 +223,13 @@ img::-moz-selection {
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+    color: #F05F40;
+  }
+  #mainNav.navbar-shrink .language-switch {
+    color: #6c757d;
+  }
+  #mainNav.navbar-shrink .language-switch a:hover,
+  #mainNav.navbar-shrink .language-switch a:focus {
     color: #F05F40;
   }
 }
