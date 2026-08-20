@@ -519,7 +519,7 @@ text-align: center;
 
 .lncs-publication {
   margin: 1.5rem auto 1.75rem;
-  max-width: 215px;
+  max-width: 304px;
 }
 
 .lncs-publication a {
@@ -547,10 +547,9 @@ text-align: center;
 .lncs-publication span {
   color: #546b82;
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  line-height: 1.35;
-  padding: 0.55rem 0.65rem;
+  padding: 0.7rem 1rem;
 }
 
 .keynote-row {
