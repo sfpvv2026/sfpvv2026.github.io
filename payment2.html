@@ -58,14 +58,29 @@ button:disabled { background:#a4a4a4; cursor:not-allowed; }
   <p class="cart-line"><span id="cartType"></span> Registration (Late): JPY <span id="cartAmount"></span></p>
   <div class="total">Total: JPY <span id="cartTotal"></span></div>
   <div class="cart-actions">
-    <button type="button" disabled>PAY NOW WITH PAYPAL</button>
-    <p class="notice">Payment is not yet enabled. This page is for interface testing only.</p>
+    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self">
+      <input type="hidden" name="cmd" value="_cart">
+      <input type="hidden" name="upload" value="1">
+      <input type="hidden" name="business" id="paypalBusiness">
+      <input type="hidden" name="currency_code" value="JPY">
+      <input type="hidden" name="item_name_1" id="paypalItem">
+      <input type="hidden" name="amount_1" id="paypalAmount">
+      <input type="hidden" name="quantity_1" value="1">
+      <input type="hidden" name="custom" id="paypalCustom">
+      <input type="hidden" name="return" value="https://sfpvv2026.github.io/">
+      <input type="hidden" name="cancel_return" value="https://sfpvv2026.github.io/">
+      <button type="submit">PAY NOW WITH PAYPAL</button>
+    </form>
+    <p class="notice">Please verify the registration type, amount, and payee on PayPal before paying.</p>
     <button type="button" id="resetButton">RESET</button>
   </div>
 </div>
 <script>
 'use strict';
 // Fee configuration for the late registration page.
+// A Merchant ID is a public payee identifier, NOT an API secret.
+const PAYPAL_MERCHANT_ID = 'E9FFM9KCDBUC2';
+const REGISTRATION_PERIOD = 'Late';
 const FEES = Object.freeze({Regular: 60000, Student: 50000});
 const form = document.getElementById('registrationForm');
 const registrationPanel = document.getElementById('registrationPanel');
@@ -86,8 +101,21 @@ form.addEventListener('submit', (event) => {
   document.getElementById('cartType').textContent = type;
   document.getElementById('cartAmount').textContent = fee.toLocaleString('en-US');
   document.getElementById('cartTotal').textContent = fee.toLocaleString('en-US');
+  // Save the reviewed values for the PayPal submission.
+  document.getElementById('paypalItem').value = `${type} Registration (${REGISTRATION_PERIOD}) (${number} ${name})`;
+  document.getElementById('paypalAmount').value = String(fee);
+  document.getElementById('paypalCustom').value = number;
   registrationPanel.hidden = true;
   cartPanel.hidden = false;
+});
+document.getElementById('paypalForm').addEventListener('submit', (event) => {
+  if (!/^[A-Za-z0-9]{10,20}$/.test(PAYPAL_MERCHANT_ID)) {
+    event.preventDefault();
+    alert('PayPal is not configured yet. Please contact the conference organizers.');
+    return;
+  }
+  // The PayPal recipient is configured here, not entered by the registrant.
+  document.getElementById('paypalBusiness').value = PAYPAL_MERCHANT_ID;
 });
 document.getElementById('resetButton').addEventListener('click', () => {
   cartPanel.hidden = true;
