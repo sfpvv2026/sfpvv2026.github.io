@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/regist.css" type="text/css">
+<title>SFPVV2026 Registration Payment (Late)</title>
+<style>
+/* Fallback styles follow the simple APARM2024 payment-page layout. */
+body { background:#f5f5fa; color:#333; font-family:Arial,Helvetica,sans-serif; margin:8px; }
+h1 { color:#4caf50; font-size:28px; margin:18px 0 36px; }
+.container { max-width:535px; box-sizing:border-box; background:white; padding:18px; border-radius:7px; box-shadow:0 2px 10px #00000012; margin:0 0 20px 10px; }
+.inform-item label, .section-label { display:block; font-weight:bold; margin:0 0 7px; }
+.inform-item input { width:100%; box-sizing:border-box; height:49px; border:1px solid #bbb; border-radius:3px; padding:10px 13px; font-size:16px; margin-bottom:10px; }
+.hint { font-size:14px; margin:0 0 19px; }
+.radio-group { margin:14px 0 35px; }
+.radio-options { display:flex; gap:25px; flex-wrap:wrap; margin-top:12px; }
+.radio-item { display:flex; align-items:flex-start; gap:8px; font-weight:bold; }
+.radio-item input { margin-top:2px; }
+button { background:#4caf50; border:0; border-radius:5px; color:white; font-size:14px; font-weight:bold; padding:14px 19px; cursor:pointer; }
+button:hover:not(:disabled) { background:#429846; }
+button:disabled { background:#a4a4a4; cursor:not-allowed; }
+.cart-line { margin:24px 0 37px; font-weight:bold; overflow-wrap:anywhere; }
+.total { border-top:1px solid #666; padding-top:10px; font-weight:bold; margin:43px 0 50px; }
+.cart-actions button { display:block; margin-bottom:22px; }
+.notice { color:#666; font-size:13px; margin:-12px 0 22px; }
+[hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<h1>SFPVV2026 Registration Payment (Late)</h1>
+<div class="container" id="registrationPanel">
+  <form id="registrationForm">
+    <div class="inform-item">
+      <label for="name">Name (Full name):</label>
+      <input type="text" id="name" name="name" maxlength="150" autocomplete="name" required>
+    </div>
+    <div class="inform-item">
+      <label for="registrationNumber">Registration Number:</label>
+      <input type="text" id="registrationNumber" name="registrationNumber" pattern="SFPVV2026-[0-9]{3,}" title="Example: SFPVV2026-001" maxlength="30" required>
+    </div>
+    <p class="hint">Ex. SFPVV2026-001. Please check the registration number in your confirmation email.</p>
+    <div class="radio-group">
+      <span class="section-label">Registration Type:</span>
+      <div class="radio-options">
+        <label class="radio-item"><input type="radio" name="conferenceType" value="Regular" required>Regular - 60,000 JPY</label>
+        <label class="radio-item"><input type="radio" name="conferenceType" value="Student" required>Student - 50,000 JPY</label>
+      </div>
+    </div>
+    <button type="submit">ADD CART</button>
+  </form>
+</div>
+<div class="container" id="cartPanel" hidden>
+  <h2>Your cart</h2>
+  <p class="cart-line">Name: <span id="cartName"></span></p>
+  <p class="cart-line">Registration Number: <span id="cartNumber"></span></p>
+  <p class="cart-line"><span id="cartType"></span> Registration (Late): JPY <span id="cartAmount"></span></p>
+  <div class="total">Total: JPY <span id="cartTotal"></span></div>
+  <div class="cart-actions">
+    <button type="button" disabled>PAY NOW WITH PAYPAL</button>
+    <p class="notice">Payment is not yet enabled. This page is for interface testing only.</p>
+    <button type="button" id="resetButton">RESET</button>
+  </div>
+</div>
+<script>
+'use strict';
+// Fee configuration for the late registration page.
+const FEES = Object.freeze({Regular: 60000, Student: 50000});
+const form = document.getElementById('registrationForm');
+const registrationPanel = document.getElementById('registrationPanel');
+const cartPanel = document.getElementById('cartPanel');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+  const name = document.getElementById('name').value.trim();
+  const number = document.getElementById('registrationNumber').value.trim();
+  const selected = form.querySelector('input[name="conferenceType"]:checked');
+  if (!name || !/^SFPVV2026-[0-9]{3,}$/.test(number) || !selected) return;
+  const type = selected.value;
+  const fee = FEES[type];
+  if (!Number.isInteger(fee)) return;
+  // textContent avoids injecting user input into HTML.
+  document.getElementById('cartName').textContent = name;
+  document.getElementById('cartNumber').textContent = number;
+  document.getElementById('cartType').textContent = type;
+  document.getElementById('cartAmount').textContent = fee.toLocaleString('en-US');
+  document.getElementById('cartTotal').textContent = fee.toLocaleString('en-US');
+  registrationPanel.hidden = true;
+  cartPanel.hidden = false;
+});
+document.getElementById('resetButton').addEventListener('click', () => {
+  cartPanel.hidden = true;
+  registrationPanel.hidden = false;
+});
+</script>
+</body>
+</html>
