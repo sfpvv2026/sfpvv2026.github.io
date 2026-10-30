@@ -175,7 +175,7 @@ img::-moz-selection {
   opacity: 1;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #mainNav {
     border-color: transparent;
     background-color: transparent;
@@ -187,7 +187,7 @@ img::-moz-selection {
     color: #fff;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -569,6 +569,117 @@ text-align: center;
   .schedule-table td {
     padding: 0.5rem;
   }
+}
+
+#accepted-papers,
+.accepted-track {
+  scroll-margin-top: 5rem;
+}
+
+.accepted-track {
+  margin: 2rem auto 0;
+  max-width: 960px;
+}
+
+.accepted-track > h2 {
+  color: #546b82;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.accepted-count {
+  color: #6c757d;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+
+.accepted-track-links a {
+  display: inline-block;
+}
+
+.accepted-paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accepted-paper-list li {
+  border-bottom: 1px solid #e1e5e9;
+  overflow-wrap: break-word;
+  padding: 1rem 0;
+}
+
+.accepted-paper-list h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 0.3rem;
+}
+
+.accepted-paper-list p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.accepted-papers-button {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.papers-page #mainNav {
+  background-color: #fff;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.papers-page #mainNav .navbar-nav > li.nav-item > a.nav-link,
+.papers-page #mainNav .language-switch {
+  color: #212529;
+}
+
+.papers-page #mainNav .navbar-nav > li.nav-item > a.nav-link[aria-current="page"],
+.papers-page #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+.papers-page #mainNav .language-switch a:hover {
+  color: #F05F40;
+}
+
+.papers-content {
+  padding: 6rem 0 3rem;
+}
+
+.papers-intro,
+.papers-actions {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.papers-breadcrumb {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.papers-conference {
+  color: #546b82;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.papers-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.papers-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-top: 2rem;
 }
 
 .lncs-publication {
