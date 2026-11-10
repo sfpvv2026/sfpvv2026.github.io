@@ -737,6 +737,168 @@ text-align: center;
   max-width: 840px;
 }
 
+#program,
+.program-day {
+  scroll-margin-top: 5rem;
+}
+
+.program-intro {
+  max-width: 960px;
+  margin: 0 auto 2rem;
+}
+
+.program-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.program-durations,
+.program-meta,
+.program-affiliations {
+  color: #555;
+}
+
+.program-day-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.program-day-links a,
+.program-intro a {
+  color: #a63720;
+  text-decoration: underline;
+}
+
+.program-day {
+  max-width: 960px;
+  margin: 2rem auto;
+}
+
+.program-day > h3 {
+  background: #546b82;
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 1rem 1.25rem;
+}
+
+.program-table {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #dce2e7;
+}
+
+.program-table th,
+.program-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #dce2e7;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.program-table thead {
+  background: #edf1f4;
+}
+
+.program-table th:first-child {
+  width: 160px;
+}
+
+.program-time {
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.program-table h4 {
+  color: #354c62;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.program-meta {
+  font-size: 0.9rem;
+  margin: 0.35rem 0 0;
+}
+
+.program-meta a {
+  color: #a63720;
+  text-decoration: underline;
+}
+
+.program-event {
+  background: #f7f8fa;
+}
+
+.program-talks {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.program-talks li + li {
+  border-top: 1px solid #e8ecef;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.program-type {
+  color: #555;
+  font-size: 0.8rem;
+  margin: 0 0 0.25rem;
+}
+
+.program-talks h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 0.35rem;
+}
+
+.program-authors,
+.program-affiliations {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 0.2rem;
+}
+
+@media (max-width: 575.98px) {
+  .program-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .program-table,
+  .program-table tbody,
+  .program-table tr,
+  .program-table th,
+  .program-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .program-table th:first-child {
+    width: 100%;
+    padding: 0.9rem 1rem 0;
+    border-bottom: 0;
+    color: #354c62;
+  }
+
+  .program-table td {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .program-day > h3 {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .special-issue-card {
     grid-template-columns: 1fr;
