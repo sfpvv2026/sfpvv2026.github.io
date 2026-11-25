@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <link href="css/creative.css" rel="stylesheet">
+    <link href="participant-papers.css" rel="stylesheet">
 </head>
 <body id="page-top" class="papers-page">
 <nav class="navbar navbar-expand-xl navbar-light fixed-top" id="mainNav">
@@ -70,6 +71,20 @@
                 <a class="js-scroll-trigger" href="#presentations">Presentation Track (8件)</a>
             </p>
         </div>
+        <aside class="participant-papers" aria-labelledby="participant-heading">
+            <h2 id="participant-heading">参加者用の論文集</h2>
+            <p>参加者にお知らせしたパスワードを入力してください。ダウンロードした ZIP ファイルの解凍にも同じパスワードを使います。</p>
+            <form id="participant-form" hidden>
+                <label for="participant-password">参加者用パスワード</label>
+                <div class="participant-controls">
+                    <input class="form-control" id="participant-password" type="password" autocomplete="off" required>
+                    <button class="btn btn-dark" type="submit">ロックを解除</button>
+                </div>
+            </form>
+            <noscript>論文集をダウンロードするには JavaScript を有効にしてください。</noscript>
+            <p id="participant-status" role="status"></p>
+            <a id="participant-download" download="SFPVV2026-papers.zip" hidden>論文集をダウンロード（ZIP）</a>
+        </aside>
         <div id="regular-papers" class="accepted-track" aria-labelledby="regular-papers-heading">
             <h2 id="regular-papers-heading">Regular Paper Track <span class="accepted-count">15件</span></h2>
             <ul class="accepted-paper-list" lang="en">
@@ -185,5 +200,6 @@
 <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="js/creative.min.js"></script>
+<script src="participant-papers.js"></script>
 </body>
 </html>

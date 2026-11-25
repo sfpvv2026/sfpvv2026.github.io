@@ -26,6 +26,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.css" rel="stylesheet">
+    <link href="participant-papers.css" rel="stylesheet">
 
 </head>
 <body id="page-top" class="papers-page">
@@ -103,6 +104,20 @@
                 <a class="js-scroll-trigger" href="#presentations">Presentation Track (8 presentations)</a>
             </p>
         </div>
+        <aside class="participant-papers" aria-labelledby="participant-heading">
+            <h2 id="participant-heading">Participant papers</h2>
+            <p>Use the password shared with participants to unlock the archive. Use the same password to open the ZIP file.</p>
+            <form id="participant-form" hidden>
+                <label for="participant-password">Participant password</label>
+                <div class="participant-controls">
+                    <input class="form-control" id="participant-password" type="password" autocomplete="off" required>
+                    <button class="btn btn-dark" type="submit">Unlock papers</button>
+                </div>
+            </form>
+            <noscript>Enable JavaScript to unlock the papers.</noscript>
+            <p id="participant-status" role="status"></p>
+            <a id="participant-download" download="SFPVV2026-papers.zip" hidden>Download papers (ZIP)</a>
+        </aside>
         <div id="regular-papers" class="accepted-track" aria-labelledby="regular-papers-heading">
             <h2 id="regular-papers-heading">Regular Paper Track <span class="accepted-count">15 papers</span></h2>
             <ul class="accepted-paper-list" lang="en">
@@ -218,5 +233,6 @@
 <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="js/creative.min.js"></script>
+<script src="participant-papers.js"></script>
 </body>
 </html>

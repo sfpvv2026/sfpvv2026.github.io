@@ -1,0 +1,41 @@
+.participant-papers {
+  background: #f4f7fa;
+  border-left: 4px solid #546b82;
+  margin: 1.5rem auto 0;
+  max-width: 960px;
+  padding: 1.25rem;
+}
+
+.participant-papers h2 {
+  color: #374b60;
+  font-size: 1.4rem;
+}
+
+.participant-papers p {
+  margin: 0.5rem 0;
+}
+
+.participant-papers label {
+  font-weight: 600;
+}
+
+.participant-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.participant-controls input {
+  max-width: 18rem;
+}
+
+#participant-status:empty {
+  margin: 0;
+}
+
+#participant-download {
+  color: #244e74;
+  font-weight: 600;
+  text-decoration: underline;
+}
